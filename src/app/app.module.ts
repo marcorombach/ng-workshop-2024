@@ -5,15 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BookListComponent } from './books/book-list/book-list.component';
 import { FormsModule } from '@angular/forms';
-import { CalculatorComponent } from './utils/calculator/calculator.component';
 import { registerLocaleData } from '@angular/common';
 import localeDe from '@angular/common/locales/de';
 import localeDeExtra from '@angular/common/locales/extra/de';
 import { BookFilterPipe } from './books/book-filter.pipe';
-import { RatingComponent } from './utils/rating/rating.component';
 import { HttpClientModule } from '@angular/common/http';
 import { WelcomeComponent } from './welcome/welcome/welcome.component';
 import { BookDetailComponent } from './books/book-detail/book-detail.component';
+import { UtilsModule } from './utils/utils.module';
 
 registerLocaleData(localeDe, 'de-DE', localeDeExtra);
 
@@ -21,9 +20,7 @@ registerLocaleData(localeDe, 'de-DE', localeDeExtra);
   declarations: [
     AppComponent,
     BookListComponent,
-    CalculatorComponent,
     BookFilterPipe,
-    RatingComponent,
     WelcomeComponent,
     BookDetailComponent
   ],
@@ -31,7 +28,8 @@ registerLocaleData(localeDe, 'de-DE', localeDeExtra);
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    UtilsModule
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'de-DE'}],
   bootstrap: [AppComponent]

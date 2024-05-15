@@ -2,7 +2,6 @@ import { Component, OnChanges, OnDestroy, OnInit } from '@angular/core';
 import { Book } from '../book.interface';
 import { RatingInfo } from '../../utils/rating/ratingInfo.interface';
 import { BookDataService } from '../book-data.service';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'book-list',
