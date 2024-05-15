@@ -9,7 +9,8 @@
     "postbuild": "echo 'ausfuehrung nachm build'",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "db:mock": "json-server -p 2929 .\\src\\db\\db.json"
+    "predb:mock":"npm i -g json-server@0.17",
+    "db:mock": "json-server -p 2929 .\\src\\db\\db.json --id isbn"
   },
   "private": true,
   "dependencies": {
