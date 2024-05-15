@@ -20,6 +20,10 @@ registerLocaleData(localeDe, 'de-DE', localeDeExtra);
     BrowserModule,
     FormsModule
   ],
+  exports: [
+    RatingComponent,
+    CalculatorComponent
+  ],
   providers: [],
   bootstrap: []
 })
