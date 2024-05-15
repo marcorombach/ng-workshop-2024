@@ -5,22 +5,17 @@
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
       </div>
       <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-neutral rounded-box w-52">
-        <li><a>placeholder</a></li>
-        <li><a>placeholder</a></li>
-        <li><a>placeholder</a></li>
+        <li><a routerLink="welcome">Willkommen</a></li>
+        <li><a routerLink="books">Bücher</a></li>
+        <li><a routerLink="calc">Taschenrechner</a></li>
       </ul>
     </div>
   </div>
   <div class="navbar-center">
     <a class="btn btn-ghost text-xl">{{ title.toUpperCase() }}</a>
   </div>
-  <div class="navbar-end">
-
-  </div>
 </div>
 <div class="container mx-auto p-4">
-  <book-list></book-list>
-  <book-calculator></book-calculator>
   <router-outlet />
 </div>
 

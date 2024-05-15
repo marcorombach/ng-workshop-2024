@@ -12,6 +12,7 @@ import localeDeExtra from '@angular/common/locales/extra/de';
 import { BookFilterPipe } from './books/book-filter.pipe';
 import { RatingComponent } from './utils/rating/rating.component';
 import { HttpClientModule } from '@angular/common/http';
+import { WelcomeComponent } from './welcome/welcome/welcome.component';
 
 registerLocaleData(localeDe, 'de-DE', localeDeExtra);
 
@@ -21,7 +22,8 @@ registerLocaleData(localeDe, 'de-DE', localeDeExtra);
     BookListComponent,
     CalculatorComponent,
     BookFilterPipe,
-    RatingComponent
+    RatingComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
