@@ -1,0 +1,23 @@
+<div class="card bg-neutral mt-5 mb-5">
+    <div class="card-body">
+        <div class="card-title">Rechner</div>
+        <div class="mb-2">
+            <label class="input input-bordered flex items-center gap-2">
+                <input type="number" [(ngModel)]="x" class="grow" placeholder="x" required/>
+            </label>
+        </div>
+        <div class="mb-2">
+            <label class="input input-bordered flex items-center gap-2">
+                <input type="number" [(ngModel)]="y" class="grow" placeholder="y" required/>
+            </label>
+        </div>
+        <div class="row">
+            <button class="btn btn-primary m-1" (click)="add()">+</button>
+            <button class="btn btn-secondary m-1" (click)="sub()">-</button>
+            <button class="btn btn-error m-1" (click)="clear()">C</button>
+        </div>
+        <div *ngIf="result" class="row">
+            <div class="badge badge-lg badge-outline" [ngClass]="{'badge-error' : getResult() < 0}">Ergebnis: {{ result }}</div>
+        </div>
+    </div>
+</div>

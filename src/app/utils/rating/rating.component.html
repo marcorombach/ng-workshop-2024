@@ -1,0 +1,13 @@
+<div class="rating">
+    <input type="radio" [name]="'rating' + id" class="mask mask-star-2 bg-orange-400" [checked]="rating <= 1.5" (click)="updateRating(1)"/>
+    <input type="radio" [name]="'rating' + id" class="mask mask-star-2 bg-orange-400" [checked]="rating > 1.5 && rating <= 2.5" (click)="updateRating(2)"/>
+    <input type="radio" [name]="'rating' + id" class="mask mask-star-2 bg-orange-400" [checked]="rating > 2.5 && rating <= 3.5" (click)="updateRating(3)"/>
+    <input type="radio" [name]="'rating' + id" class="mask mask-star-2 bg-orange-400" [checked]="rating > 3.5 && rating <= 4.5" (click)="updateRating(4)"/>
+    <input type="radio" [name]="'rating' + id" class="mask mask-star-2 bg-orange-400" [checked]="rating > 4.5" (click)="updateRating(5)"/>
+</div>
+{{ rating }}
+{{ rating <= 1.5 }}
+{{ rating > 1.5 && rating <= 2.5 }}
+{{ rating > 2.5 && rating <= 3.5 }}
+{{ rating > 3.5 && rating <= 4.5 }}
+{{ rating > 4.5 }}
