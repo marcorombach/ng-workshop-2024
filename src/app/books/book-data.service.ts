@@ -18,4 +18,12 @@ export class BookDataService {
     return firstValueFrom(this.http.get<Book[]>('http://localhost:2929/books'));
   }
 
+  getBookByIsbn(isbn: string): Observable<Book>{
+    return this.http.get<Book>('http://localhost:2929/books/' + isbn);
+  }
+
+  deleteBookByIsbn(isbn: string){
+    
+  }
+
 }
