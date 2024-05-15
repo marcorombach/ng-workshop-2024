@@ -2,6 +2,7 @@ import { Component, OnChanges, OnDestroy, OnInit } from '@angular/core';
 import { Book } from '../book.interface';
 import { RatingInfo } from '../../utils/rating/ratingInfo.interface';
 import { BookDataService } from '../book-data.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'book-list',
@@ -22,11 +23,20 @@ export class BookListComponent implements OnInit, OnDestroy, OnChanges {
     console.log('OnChanges');
     // Wird aufgerufen wenn Daten über @Input an eine Komponente übertragen werden
   }
-
+  
   ngOnInit(){
-    console.log('OnInit');
-    this.books = this.bookDataService.getBooks();
     // Wird aufgerufen kurz bevor die Komponente im Browser als HTML gerendert wird
+    console.log('OnInit');
+
+    // Mit Observable
+    this.bookDataService.getBooks().subscribe((books) =>{
+      this.books = books;
+    }); 
+    
+
+    /* Mit Promise (async/await)
+    this.books = await this.bookDataService.getBooksNew();
+    */
   }
 
   ngOnDestroy(){
